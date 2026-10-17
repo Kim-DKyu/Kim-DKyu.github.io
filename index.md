@@ -37,6 +37,16 @@ title: 이력서
 ## 경력
 
 <div class="entry">
+<div class="row"><b>지뉴소프트</b><time>2026.06 – 현재</time></div>
+<p class="sub">AI 연구원 · 초분광 영상(HSI) 전이학습 플랫폼 개발</p>
+<ul>
+<li>동결한 파운데이션 백본 위에 태스크 헤드만 튜닝하는 초분광 전이학습 플랫폼 설계·개발. FastAPI + React, 온프레미스 GPU 서버와 Docker 기반 배포.</li>
+<li>이미지 단위 라벨 세트의 이상 라벨 탐지 기능 개발. 현장 데이터 1,152장 검증에서 재현율 90%, 오탐 16%.</li>
+<li>운영 환경의 분류 결과를 개발 환경으로 넘겨 라벨 세트로 묶는 배치 전이 등 운영·개발 연계 기능 구현.</li>
+</ul>
+</div>
+
+<div class="entry">
 <div class="row"><b>케이엘넷</b><time>2021.05 – 2022.07</time></div>
 <p class="sub">인프라개발파트 연구원 · 백엔드/서버 개발</p>
 <ul>
