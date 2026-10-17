@@ -12,6 +12,7 @@
       <header>
         {% if site.logo %}<img class="photo" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">{% endif %}
         <h1>{{ site.title }}</h1>
+        {% if site.tagline %}<p class="tagline">{{ site.tagline }}</p>{% endif %}
         {% if site.interests %}
         <ul class="interests">
           {% for k in site.interests %}<li>{{ k }}</li>{% endfor %}

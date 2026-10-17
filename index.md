@@ -7,14 +7,14 @@ title: 이력서
 ## 학력
 
 <div class="entry">
-<div class="row"><b>아주대학교 대학원</b><time>2023.09 – 2026.02</time></div>
+<div class="row"><h3>아주대학교 대학원</h3><time>2023.09 – 2026.02</time></div>
 <p class="sub">인공지능학과 석사 · 학점 3.94 / 4.5</p>
 </div>
 
 ## 논문
 
 <div class="entry pub">
-<div class="row"><b>Knowledge Distillation with Lightweight Peer Branches for Learning Diverse Representations</b></div>
+<div class="row"><h3>Knowledge Distillation with Lightweight Peer Branches for Learning Diverse Representations</h3></div>
 <p class="authors"><strong>Dongkyu Kim</strong><sup>†</sup>, Soohyun Pyo<sup>†</sup>, Junhyeong Go, Jongbin Ryu <span class="note">(<sup>†</sup> equal contribution)</span></p>
 <p class="sub">Scientific Reports · 2차 수정(revision) 중 · Ajou University</p>
 <p class="plinks"><a href="https://github.com/Kim-DKyu/DLPB">Code</a></p>
@@ -23,21 +23,21 @@ title: 이력서
 ## 프로젝트
 
 <div class="entry">
-<div class="row"><b>복부 CT 기반 근감소증 연구 과제</b><time>2025.11 – 2026.03</time></div>
+<div class="row"><h3>복부 CT 기반 근감소증 연구 과제</h3><time>2025.11 – 2026.03</time></div>
 <p class="sub">아주대학교 권역외상센터 협업 · 근육량 예측 전체 프로세스 구축</p>
-<p class="tldr">U-Net 으로 복부 CT 의 근육 영역을 자동 추출하고, 100장뿐인 데이터 한계를 구간화 분류로 돌려 근육량 예측 파이프라인을 끝까지 세웠다.</p>
+<p class="tldr">U-Net으로 복부 CT의 근육 영역을 자동 추출하고, 100장뿐인 데이터 한계를 구간화 분류로 돌려 근육량 예측 파이프라인을 끝까지 세웠다.</p>
 </div>
 
 <div class="entry">
-<div class="row"><b>TBP 이미지 분석 SW 시스템 개발</b><time>2023.08 – 2023.12</time></div>
+<div class="row"><h3>TBP 이미지 분석 SW 시스템 개발</h3><time>2023.08 – 2023.12</time></div>
 <p class="sub">스페클립스 산학 과제 · feature matching 알고리즘 조사 및 프로토타입 구축</p>
-<p class="tldr">전신 사진 두 장에서 YOLOv8 로 점을 찾고 LightGlue 로 매칭해, 오매칭 5% 이하 · 약 2초 추론으로 생성·소멸 점을 잡는 프로토타입을 만들었다.</p>
+<p class="tldr">전신 사진 두 장에서 YOLOv8로 점을 찾고 LightGlue로 매칭해, 오매칭 5% 이하 · 약 2초 추론으로 생성·소멸 점을 잡는 프로토타입을 만들었다.</p>
 </div>
 
 ## 경력
 
 <div class="entry">
-<div class="row"><b>지뉴소프트</b><time>2026.06 – 현재</time></div>
+<div class="row"><h3>지뉴소프트</h3><time>2026.06 – 현재</time></div>
 <p class="sub">연구원 · 초분광 영상(HSI) 전이학습 플랫폼 개발</p>
 <ul>
 <li>동결한 파운데이션 백본 위에 태스크 헤드만 튜닝하는 초분광 전이학습 플랫폼 설계·개발. FastAPI + React, 온프레미스 GPU 서버와 Docker 기반 배포.</li>
@@ -47,7 +47,7 @@ title: 이력서
 </div>
 
 <div class="entry">
-<div class="row"><b>케이엘넷</b><time>2021.05 – 2022.07</time></div>
+<div class="row"><h3>케이엘넷</h3><time>2021.05 – 2022.07</time></div>
 <p class="sub">인프라개발파트 연구원 · 백엔드/서버 개발</p>
 <ul>
 <li>선사·중계기·화주 간 문서 송수신을 위한 FTP Client/Server 운영. 이미지 BL + EDI 문서 처리 서비스 개발.</li>
@@ -59,20 +59,20 @@ title: 이력서
 ## 기술
 
 <p class="chips">
-<span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Computer Vision</span><span>Knowledge Distillation</span>
-<span>Vision-Language Model</span><span>Multimodal</span><span>Image Processing</span><span>SQL</span><span>Docker</span>
+<span>Python</span><span>PyTorch</span><span>OpenCV</span><span>FastAPI</span>
+<span>React</span><span>SQL</span><span>Docker</span><span>Kafka</span>
 </p>
 
 ## 교육 · 자격
 
 <div class="entry">
-<div class="row"><b>코드스테이츠 AI 부트캠프</b><time>2022.08 – 2023.02</time></div>
+<div class="row"><h3>코드스테이츠 AI 부트캠프</h3><time>2022.08 – 2023.02</time></div>
 <p class="sub">EDA · Machine Learning · SQL / Flask / Docker · 자료구조 · 알고리즘</p>
 </div>
 
-<div class="entry">
-<div class="row"><b>SQL 개발자 (SQLD)</b><time>2022.12</time></div>
-<div class="row"><b>정보처리기사</b><time>2020.08</time></div>
-<div class="row"><b>정보처리산업기사</b><time>2019.05</time></div>
-<div class="row"><b>TOEIC Speaking · Intermediate High (140)</b><time>2026.02</time></div>
+<div class="entry certs">
+<div class="row"><span>TOEIC Speaking · Intermediate High (140)</span><time>2026.02</time></div>
+<div class="row"><span>SQL 개발자 (SQLD)</span><time>2022.12</time></div>
+<div class="row"><span>정보처리기사</span><time>2020.08</time></div>
+<div class="row"><span>정보처리산업기사</span><time>2019.05</time></div>
 </div>

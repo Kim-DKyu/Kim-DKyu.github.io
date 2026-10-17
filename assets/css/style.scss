@@ -2,7 +2,7 @@
 ---
 @import "jekyll-theme-minimal";
 
-/* ===== 색·글꼴 토큰 ===== */
+/* ===== 색·글꼴 토큰 (DESIGN.md 와 같은 값) ===== */
 :root {
   --bg: #fcfcfa;
   --fg: #22262a;
@@ -16,62 +16,95 @@
   :root { --bg: #16191c; --fg: #e6e8e6; --muted: #9aa1a8; --line: #2c3136; --accent: #7fc7bf; --chip: #1f2529; }
 }
 
+/* ===== 기본 테마 덮기 =====
+   minimal 테마는 글자색을 #222·#494949 등으로 고정하고, 링크에 마우스가 가면 굵게 만든다.
+   어두운 테마에서 글자가 사라지고 버튼 폭이 흔들리므로 전부 토큰으로 되돌린다. */
+h1, h2, h3, h4, h5, h6, strong, b, dt, th { color: var(--fg); }
+code, pre { color: var(--fg); background: var(--chip); border-color: var(--line); }
+blockquote { border-left-color: var(--line); color: var(--muted); }
+a small, small { color: var(--muted); }
+a:hover, a:focus { font-weight: inherit; }
+
 /* ===== 기본 ===== */
 body { background: var(--bg); color: var(--fg); font-family: "Noto Sans KR", system-ui, sans-serif; font-size: 15px; line-height: 1.7; }
+/* 한글은 단어 중간에서 줄을 바꾸지 않는다. 긴 영문·URL 은 넘치면 끊는다 */
+body { word-break: keep-all; overflow-wrap: break-word; }
 a { color: var(--accent); }
 a:hover, a:focus { color: var(--accent); text-decoration: underline; }
+::selection { background: var(--accent); color: var(--bg); }
 .wrapper { width: 920px; }
-header { width: 240px; }
 section { width: 600px; }
 
-/* ===== 본문 ===== */
-section h2:first-of-type { margin-top: 0; }
+/* ===== 사이드바 ===== */
+header { width: 240px; display: flex; flex-direction: column; }
+/* 넓은 화면에서 사이드바가 고정되므로, 창이 낮으면 안에서 스크롤되게 한다 */
+@media screen and (min-width: 961px) {
+  header { max-height: calc(100vh - 100px); overflow-y: auto; }
+}
+header .photo { width: 150px; height: auto; border-radius: 6px; border: 1px solid var(--line); margin: 0 0 18px; }
+header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 6px; }
+header .tagline { color: var(--muted); font-size: 13.5px; line-height: 1.5; margin: 0 0 20px; }
+header ul { list-style: none; margin: 0; padding: 0; }
+header .interests { margin: 0 0 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+header .interests li { font-family: var(--mono); font-size: 12.5px; color: var(--muted); line-height: 1.9; }
+header .interests li::before { content: "—"; color: var(--accent); margin-right: 8px; }
+header .links { display: flex; flex-wrap: wrap; gap: 6px; }
 
+/* ===== 링크 버튼 (사이드바 GitHub, 논문 Code) ===== */
+header .links a,
+.entry .plinks a {
+  display: inline-block; border: 1px solid var(--line); border-radius: 3px;
+  text-decoration: none; transition: border-color .15s ease-out;
+}
+header .links a { padding: 3px 10px; font-size: 13px; }
+.entry .plinks a { padding: 1px 8px; font-family: var(--mono); font-size: 12px; }
+header .links a:hover, header .links a:focus-visible,
+.entry .plinks a:hover, .entry .plinks a:focus-visible { border-color: var(--accent); text-decoration: none; }
+/* 손가락으로 누르는 기기에서는 누를 자리를 44px 로 키운다 */
+@media (pointer: coarse) {
+  header .links a, .entry .plinks a { display: inline-flex; align-items: center; min-height: 44px; padding-left: 14px; padding-right: 14px; }
+}
+
+/* ===== 본문 ===== */
 section h2 {
-  font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-  color: var(--accent); margin: 38px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  font-size: 14px; font-weight: 700; color: var(--accent);
+  margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
 }
 section h2:first-of-type { margin-top: 0; }
 
 /* 항목: 제목 왼쪽, 기간 오른쪽 */
 .entry { margin: 0 0 18px; }
 .entry .row { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
-.entry .row b { font-weight: 700; font-size: 15px; }
+.entry .row h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin: 0; }
 .entry .row time { font-family: var(--mono); font-size: 12.5px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .entry .sub { color: var(--muted); font-size: 13.5px; margin: 0 0 4px; }
+.entry .tldr { margin: 6px 0 0; }
 .entry ul { margin: 4px 0 0; padding-left: 18px; }
 .entry li { margin: 2px 0; }
 
-/* 기술 칩 */
-.chips { display: flex; flex-wrap: wrap; gap: 6px 6px; margin: 0; }
-.chips span { background: var(--chip); border: 1px solid var(--line); border-radius: 3px; padding: 2px 9px; font-size: 13px; font-family: var(--mono); }
-
-
-/* 좁은 화면: 테마가 1단으로 접을 때 */
-@media print, screen and (max-width: 960px) {
-  .wrapper, header, section { width: auto; }
-  header { padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
-}
-
-/* ===== 사이드바 ===== */
-header { display: flex; flex-direction: column; gap: 0; }
-header .photo { width: 150px; height: auto; border-radius: 6px; border: 1px solid var(--line); margin: 0 0 18px; }
-header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 6px; color: var(--fg); }
-header ul { list-style: none; margin: 0; padding: 0; }
-header .interests { margin: 0 0 22px; padding-top: 16px; border-top: 1px solid var(--line); }
-header .interests li { font-family: var(--mono); font-size: 12.5px; color: var(--muted); line-height: 1.9; }
-header .interests li::before { content: "—"; color: var(--accent); margin-right: 8px; }
-header .links { display: flex; flex-wrap: wrap; gap: 6px; }
-header .links a { display: inline-block; padding: 3px 10px; border: 1px solid var(--line); border-radius: 3px; font-size: 13px; text-decoration: none; }
-header .links a:hover { border-color: var(--accent); }
-section h2:first-of-type { margin-top: 0; }
-
-.entry .tldr { margin: 6px 0 0; }
+/* 자격: 항목 제목보다 한 단계 가볍게 */
+.entry.certs .row span { font-weight: 400; }
 
 /* 논문 저자·링크 */
 .entry .authors { margin: 4px 0 0; font-size: 14px; }
 .entry .authors strong { font-weight: 700; }
 .entry .authors .note { color: var(--muted); font-size: 12.5px; }
 .entry .plinks { margin: 6px 0 0; display: flex; gap: 6px; flex-wrap: wrap; }
-.entry .plinks a { font-family: var(--mono); font-size: 12px; padding: 1px 8px; border: 1px solid var(--line); border-radius: 3px; text-decoration: none; }
-.entry .plinks a:hover { border-color: var(--accent); }
+
+/* 기술 칩 */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.chips span { background: var(--chip); border: 1px solid var(--line); border-radius: 3px; padding: 2px 9px; font-size: 13px; font-family: var(--mono); }
+
+/* ===== 960px 이하: 한 단으로 접힘 =====
+   테마는 이 구간에서 사이드바에 오른쪽 여백 320px 를 주고 목록을 절대 위치로 띄워 겹치게 한다. 되돌린다. */
+@media print, screen and (max-width: 960px) {
+  .wrapper, header, section { width: auto; }
+  header { padding-right: 0; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+  header ul { position: static; }
+  section { border: 0; padding-top: 0; }
+}
+
+/* ===== 480px 이하: 기간을 늘 제목 아래 줄로 ===== */
+@media screen and (max-width: 480px) {
+  .entry .row { flex-direction: column; gap: 0; }
+}

@@ -3,6 +3,9 @@ title: 김동규
 lang: ko
 logo: /assets/img/profile.jpg
 
+# 이름 아래 한 줄 소개. 지우면 표시되지 않는다.
+tagline: 지뉴소프트 연구원 · 아주대학교 인공지능학과 석사
+
 # 사이드바 관심 키워드와 링크. 줄을 더하거나 빼면 그대로 반영된다.
 interests:
   - Computer Vision
@@ -19,4 +22,6 @@ plugins:
 
 exclude:
   - README.md
+  - PRODUCT.md
+  - DESIGN.md
   - _site-preview/
