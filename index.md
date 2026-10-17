@@ -15,14 +15,18 @@ title: 이력서
 
 <div class="entry pub">
 <div class="row"><b>Knowledge Distillation with Lightweight Peer Branches for Learning Diverse Representations</b></div>
-<p class="sub">Scientific Reports 투고 · 1저자 · 심사 중</p>
-<p class="tldr">Online KD 의 peer branch 를 경량 구조로 바꾸고 anchor 기반 loss 로 branch 간 표현을 갈라놓아, 파라미터를 늘리지 않고 표현 다양성과 앙상블 성능을 함께 얻는다.</p>
+<p class="authors"><strong>Dongkyu Kim</strong><sup>†</sup>, Soohyun Pyo<sup>†</sup>, Junhyeong Go, Jongbin Ryu <span class="note">(<sup>†</sup> equal contribution)</span></p>
+<p class="sub">Scientific Reports · 2차 수정(revision) 중 · Ajou University</p>
+<p class="plinks"><a href="https://github.com/Kim-DKyu/DLPB">Code</a><a href="https://doi.org/10.5281/zenodo.22761858">Zenodo</a></p>
+<p class="tldr">Online KD 에서 백본 stage 를 복제하던 peer branch 를 공유 stage 위의 경량 branch(DLPB) 로 바꾸고, branch 평균을 anchor 로 둔 decorrelation loss 로 서로 다른 예측을 내게 해, 추론 비용 증가 없이 CIFAR-100 ResNet32 +3.94%p, ImageNet-1K ConvNeXt +0.53%p · CSWin +0.77%p 를 얻었다.</p>
 <details>
 <summary>자세히</summary>
 <ul>
-<li>사전학습 모델 없이 스스로 증류하는 Online KD 에서 peer branch 를 마지막 stage 복제 대신 경량 네트워크로 설계해 파라미터 증가를 억제.</li>
-<li>모든 peer branch logit 의 평균을 anchor 로 두고 각 branch 가 anchor 에서 멀어지도록 유도하는 loss 를 도입해 표현 다양성을 확보.</li>
-<li>feature map 의 channel·spatial 분산과 앙상블 성능을 함께 비교해 표현 다양성 가설을 검증.</li>
+<li>문제: 기존 multi-view online KD 는 백본 stage 일부를 복제해 peer branch 를 만들어, branch 수에 따라 파라미터가 선형으로 늘고 branch 간 출력이 비슷해지는 표현 중복이 생김.</li>
+<li>구조: 각 stage 의 multi-scale feature 를 모아 하나의 공유 peer stage 에 넣고, 그 위에 경량 블록으로 여러 peer branch 를 둠. branch 는 학습에만 쓰고 추론 때 제거해 모델 크기와 속도는 baseline 과 동일.</li>
+<li>학습: peer branch logit 평균의 softmax 를 anchor 분포로 정의하고, 각 branch 가 anchor 에서 멀어지도록 하는 decorrelation loss 를 도입해 표현 다양성을 유도.</li>
+<li>검증: CIFAR-100 (ResNet32/110, WRN20-8/40-2, DenseNet40) 과 ImageNet-1K (ResNet18, RSB-ResNet50/101, ConvNeXt, CSWin) 에서 일관된 향상. 2026년 최신 방법(ICOKD, HSKD)과 동일 프로토콜로 비교.</li>
+<li>분석: t-SNE, Grad-CAM, feature 분산으로 branch 들이 실제로 다른 표현 공간에 활성화됨을 확인하고 앙상블 성능과의 관계를 제시.</li>
 </ul>
 </details>
 </div>
