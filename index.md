@@ -5,8 +5,11 @@ title: 이력서
 
 # 김동규
 
-<p class="lead">끊임없이 사고하고 시도해보는 AI 연구자 · 컴퓨터비전 · 지식 증류 · Vision-Language Model</p>
-<p class="contact"><a href="https://github.com/kim-dong-kyu123">github.com/kim-dong-kyu123</a></p>
+<div class="intro">
+<p class="lead">끊임없이 사고하고 시도해보는 AI 연구자</p>
+<p class="focus">Computer Vision · Knowledge Distillation · Vision-Language Model</p>
+<p class="contact"><a href="https://github.com/kim-dong-kyu123">GitHub</a></p>
+</div>
 
 ## 학력
 
