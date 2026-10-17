@@ -2,6 +2,7 @@
 title: 김동규
 description: AI 연구자 · 컴퓨터비전
 lang: ko
+logo: /assets/img/profile.jpg
 
 # 테마는 이 한 줄로 바꾼다. 예: pages-themes/cayman, pages-themes/architect, pages-themes/hacker
 remote_theme: pages-themes/minimal@v0.2.0

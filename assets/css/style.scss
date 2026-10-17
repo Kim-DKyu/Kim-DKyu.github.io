@@ -65,3 +65,8 @@ footer small { font-size: inherit; }
   .wrapper, header, section { width: auto; }
   header { padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
 }
+
+/* 프로필 사진 (사이드바, _config.yml 의 logo) */
+header img { width: 150px; height: auto; border-radius: 6px; display: block; margin: 0 0 18px; border: 1px solid var(--line); }
+header { display: flex; flex-direction: column; }
+header img { order: -1; }

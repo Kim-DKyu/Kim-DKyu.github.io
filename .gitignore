@@ -2,3 +2,4 @@ _site/
 _site-preview/
 .jekyll-cache/
 *.png
+!assets/img/*
