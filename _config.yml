@@ -13,7 +13,7 @@ interests:
   - Vision-Language Model
 links:
   - name: GitHub
-    url: https://github.com/kim-dong-kyu123
+    url: https://github.com/Kim-DKyu
 
 # 테마는 이 한 줄로 바꾼다. 예: pages-themes/cayman, pages-themes/architect, pages-themes/hacker
 remote_theme: pages-themes/minimal@v0.2.0
