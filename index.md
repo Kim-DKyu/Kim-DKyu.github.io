@@ -17,8 +17,7 @@ title: 이력서
 <div class="row"><b>Knowledge Distillation with Lightweight Peer Branches for Learning Diverse Representations</b></div>
 <p class="authors"><strong>Dongkyu Kim</strong><sup>†</sup>, Soohyun Pyo<sup>†</sup>, Junhyeong Go, Jongbin Ryu <span class="note">(<sup>†</sup> equal contribution)</span></p>
 <p class="sub">Scientific Reports · 2차 수정(revision) 중 · Ajou University</p>
-<p class="plinks"><a href="https://github.com/Kim-DKyu/DLPB">Code</a><a href="https://doi.org/10.5281/zenodo.22761858">Zenodo</a></p>
-<p class="tldr">DLPB: 경량 peer branch 로 추론 비용 증가 없이 CIFAR-100 ResNet32 +3.94%p, ImageNet-1K CSWin +0.77%p.</p>
+<p class="plinks"><a href="https://github.com/Kim-DKyu/DLPB">Code</a></p>
 </div>
 
 ## 프로젝트
