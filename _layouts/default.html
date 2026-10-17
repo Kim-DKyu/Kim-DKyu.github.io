@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "ko" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        {% if site.logo %}<img class="photo" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">{% endif %}
+        <h1>{{ site.title }}</h1>
+        <p class="desc">{{ site.description }}</p>
+        {% if site.interests %}
+        <ul class="interests">
+          {% for k in site.interests %}<li>{{ k }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if site.links %}
+        <ul class="links">
+          {% for l in site.links %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}
+        </ul>
+        {% endif %}
+      </header>
+      <section>
+      {{ content }}
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages</small></p>
+      </footer>
+    </div>
+  </body>
+</html>
