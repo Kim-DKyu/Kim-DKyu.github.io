@@ -46,8 +46,6 @@ section h2:first-of-type { margin-top: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px 6px; margin: 0; }
 .chips span { background: var(--chip); border: 1px solid var(--line); border-radius: 3px; padding: 2px 9px; font-size: 13px; font-family: var(--mono); }
 
-footer { color: var(--muted); font-size: 12px; }
-footer small { font-size: inherit; }
 
 /* 좁은 화면: 테마가 1단으로 접을 때 */
 @media print, screen and (max-width: 960px) {
