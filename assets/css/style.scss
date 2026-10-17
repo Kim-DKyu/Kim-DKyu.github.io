@@ -56,8 +56,7 @@ section h2:first-of-type { margin-top: 0; }
 /* ===== 사이드바 ===== */
 header { display: flex; flex-direction: column; gap: 0; }
 header .photo { width: 150px; height: auto; border-radius: 6px; border: 1px solid var(--line); margin: 0 0 18px; }
-header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 4px; color: var(--fg); }
-header .desc { color: var(--muted); font-size: 13.5px; margin: 0 0 22px; }
+header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 6px; color: var(--fg); }
 header ul { list-style: none; margin: 0; padding: 0; }
 header .interests { margin: 0 0 22px; padding-top: 16px; border-top: 1px solid var(--line); }
 header .interests li { font-family: var(--mono); font-size: 12.5px; color: var(--muted); line-height: 1.9; }
