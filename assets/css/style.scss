@@ -108,3 +108,18 @@ section h2:first-of-type { margin-top: 0; }
 @media screen and (max-width: 480px) {
   .entry .row { flex-direction: column; gap: 0; }
 }
+
+/* ===== 경력 · 학력 타임라인 =====
+   경력과 학력을 한 줄기 세로선에 최신순으로 둔다. 채운 점 = 경력, 빈 점 = 학력·교육, 바깥 고리 = 현재. */
+section .lede { color: var(--muted); font-size: 14px; margin: -2px 0 18px; }
+.timeline { list-style: none; margin: 0 0 8px; padding: 0 0 0 24px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 5px; top: 9px; bottom: 12px; width: 1px; background: var(--line); }
+.timeline .tl { position: relative; margin: 0 0 22px; }
+.timeline .tl:last-child { margin-bottom: 0; }
+.timeline .tl::before {
+  content: ""; position: absolute; left: -24px; top: 7px; width: 11px; height: 11px; box-sizing: border-box;
+  border-radius: 50%; border: 2px solid var(--accent); background: var(--bg);
+}
+.timeline .tl.work::before { background: var(--accent); }
+.timeline .tl.now::before { box-shadow: 0 0 0 4px var(--chip); }
+.timeline .tl ul { list-style: disc; }
